@@ -9,7 +9,7 @@ sidebar_position: 2
 Enter the directory you want to install Hye Lava to, and clone the repository.
 
 ```
-git clone https://github.com/Hye-Lava/Lava.git
+git clone https://github.com/Hye-Ararat/Lava.git
 ```
 
 Now let's install Lava's dependencies

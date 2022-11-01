@@ -42,7 +42,6 @@ On Windows, Lava must run under a supported **[Ubuntu Windows Subsystem for Linu
 
 The ports listed below must be opened
 
-- 3001 (Node)
 - Any Port Of Your Choice For SSL (if you choose to enable ssl)
 - 8443 or any port of your choice (LXD)
 - 2222 or any port of your choice (SFTP)

@@ -6,6 +6,13 @@ sidebar_position: 1
 
 # Ararat
 
+### Ports
+
+The ports listed below must be opened
+
+- 443 (ssl if chosen)
+- 3000 (web server)
+
 ### Node.JS
 :::tip
 
@@ -28,6 +35,17 @@ On Windows, Lava must run under a supported **[Ubuntu Windows Subsystem for Linu
 - Ubuntu 18.04+ (only LTS releases supported)
 - macOS 11+
 - Windows 10+
+
+
+
+### Ports
+
+The ports listed below must be opened
+
+- 3001 (Node)
+- Any Port Of Your Choice For SSL (if you choose to enable ssl)
+- 8443 or any port of your choice (LXD)
+- 2222 or any port of your choice (SFTP)
 
 ### Kernel Requirements
 The minimum supported kernel version is 5.4.

@@ -63,7 +63,7 @@ const config = {
           src: 'img/logo-square.png',
         },
         items: [
-          { to: '/', label: 'Home', position: 'left' },
+          { to: '/home', label: 'Home', position: 'left' },
           {
             type: 'doc',
             docId: 'intro',

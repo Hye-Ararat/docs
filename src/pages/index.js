@@ -103,7 +103,7 @@ export default function Home() {
                     <p style={{ marginRight: "auto", marginLeft: "auto", fontFamily: "Poppins", fontWeight: 600, fontSize: 35, color: "white" }}>Why choose Hye Ararat?</p>
                     <div className="row" style={{ marginRight: 10, marginLeft: 10 }}>
                         <FeatureItem icon={faTableColumns} title="All In One" description="Hye Ararat is a single application container, full system container, and KVM instance manager all in one package." />
-                        <FeatureItem icon={faGaugeHigh} title="High Peformant" description="Ararat was built from the ground up with performance in mind. Infact, we deploy instances 1034.61% faster than our leading competitor." />
+                        <FeatureItem icon={faGaugeHigh} title="High Performant" description="Ararat was built from the ground up with performance in mind. Infact, we deploy instances 1034.61% faster than our leading competitor." />
                         <FeatureItem icon={faSitemap} title="Built for Scale" description="Whether you are looking to run just one instance or one thousand, Ararat was built to handle your needs." />
                         <FeatureItem icon={faCode} title="Powerful API" description="Ararat provides an incredible powerful API that allows you to integrate it into your applications and automate tasks easily." />
                         <FeatureItem icon={faFolderOpen} title="Free and Open Source" description="Hye Ararat is free to use and it's codebase is open source!" />

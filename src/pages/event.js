@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 : ""}
             <div style={{ background: "url(/img/event-background.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", height: "95vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ backdropFilter: "brightness(70%)", WebkitBackdropFilter: "blur(70px) brightness(50%)", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ backdropFilter: "brightness(70%)", WebkitBackdropFilter: "brightness(70%)", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <div style={{
                         display: "flex",
                         flexDirection: "column",

@@ -71,6 +71,7 @@ const config = {
           },
 
           { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/event', label: 'Hye Event', position: 'left' },
 
           {
             href: 'https://github.com/Hye-Ararat/docs',

@@ -63,6 +63,7 @@ const config = {
           src: 'img/logo-square.png',
         },
         items: [
+          { to: '/', label: 'Home', position: 'left' },
           {
             type: 'doc',
             docId: 'intro',
@@ -71,6 +72,8 @@ const config = {
           },
 
           { to: '/blog', label: 'Blog', position: 'left' },
+          { href: 'https://cloud.hye.gg', label: 'Hye Cloud', position: 'left' },
+
           { to: '/event', label: 'Hye Event', position: 'left' },
 
           {

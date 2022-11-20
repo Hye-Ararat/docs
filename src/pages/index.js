@@ -96,7 +96,7 @@ export default function Home() {
                     <p style={{ marginRight: "auto", marginLeft: "auto", fontFamily: "Poppins", fontWeight: 600, fontSize: 35 }}>What is Hye Ararat?</p>
                     <p style={{
                         textAlign: "center", marginRight: 50, marginLeft: 50
-                    }}>Hye Ararat the next generation of container and virtual machine management. It is your one-stop shop for single application containers, full system containers, and KVM instances. All built on the incredible LXD platform.</p>
+                    }}>Hye Ararat is the next generation of container and virtual machine management. It is your one-stop shop for single application containers, full system containers, and KVM instances. All built on the incredible LXD platform.</p>
                     <img src="/img/demo.png" style={{ width: "50%" }} />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingTop: 100, paddingBottom: 100, backgroundColor: "rgb(35, 35, 40)" }}>

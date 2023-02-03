@@ -66,7 +66,7 @@ export default function Home() {
                             textAlign: "center",
                             marginTop: "auto",
                             marginBottom: "auto"
-                        }} className={clsx("h2", styles.h2)}>Take Your Infrastructure To It's Peak</p>
+                        }} className={clsx("h2", styles.h2)}>Take Your Infrastructure To Its Peak</p>
                         <div style={{ display: "flex", justifyContent: "center", width: "200px", marginRight: "auto", marginLeft: "auto", marginTop: -30 }}>
                             <img src="/img/logo-horizontal.png" style={{
                                 height: "80px", marginTop: 35

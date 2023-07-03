@@ -1,6 +1,11 @@
 ---
 sidebar_position: 2
 ---
+
+:::danger 
+Ararat is still in development
+:::
+
 # Installing Ararat
 
 ## Prerequisites

@@ -1,23 +1,78 @@
 ---
 sidebar_position: 2
 ---
-
 # Installing Ararat
-<!-- The easiest way to install Ararat is one-click deployment to Hye Cloud over the Hye Speed Network-->
 
-### Install Wizard
-On your computer, download the install wizard using this link. Your computer will connnect to your node using this wizard to install Hye Ararat.
+## Prerequisites
+Before you can install Ararat, you need to have the following installed on your system:
+- [Git](https://git-scm.com/) `apt install git`
+- [Node.js](https://nodejs.org/en/) ``curl -s https://deb.nodesource.com/setup_18.x | sudo bash``
+- [Yarn](https://yarnpkg.com/) ``npm install --global yarn``
+- [MongoDB](https://www.mongodb.com/) ``apt install mongodb-org``
 
-https://github.com/Hye-Ararat/Installer/archive/refs/heads/main.zip
+## Installing Ararat
 
-Open a new terminal in the folder, and install the required dependencies using
+```bash 
+git clone https://github.com/Hye-Ararat/Ararat.git
 ```
-npm install
+
+next navigate to the Ararat directory
+
+```bash
+cd Ararat
 ```
 
-After dependency installation, start the install wizard and follow it's instructions using the following command
+next run the following command to install all the dependencies
+
+```bash
+npm install 
 ```
-node installer.js
+
+next we need to edit the config files
+
+```bash
+nano .env
+```
+
+```env
+# The MongoDB connection string
+DATABASE_URI=mongodb://whateverthinghere
+```
+To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
+
+
+
+To Generate a random string you can use the following command
+
+```bash
+openssl rand -base64 32
+```
+```bash
+nano .env.local
+```
+```env
+ENC_KEY=32characterstring
+```
+To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
+
+Next we need to build the project
+
+```bash
+npm run build
+```
+
+Next we need to prisma migrate
+
+```bash
+npx prisma migrate dev
+```
+
+## Running Ararat
+
+To run Ararat you can use the following command
+
+```bash
+npm run start
 ```
 
 ### Congratulations

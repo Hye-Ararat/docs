@@ -1,85 +1,93 @@
 ---
 sidebar_position: 2
 ---
-
-:::danger 
-Ararat is still in development
-:::
-
 # Installing Ararat
 
-## Prerequisites
-Before you can install Ararat, you need to have the following installed on your system:
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/)
-- [MongoDB](https://www.mongodb.com/)
+## Installing Node.js
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+
+```bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+```
+
+```bash
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
+```bash
+nvm install --lts
+```
+
+```bash
+nvm use --lts
+```
+
+## Installing MongoDB
+
+```bash
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+
+```bash
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+
+```bash
+sudo apt-get update
+```
+
+```bash
+sudo apt-get install -y mongodb-org
+```
+
+```bash
+sudo systemctl start mongod
+```
+
+```bash
+sudo systemctl enable mongod
+```
 
 ## Installing Ararat
 
-```bash 
-git clone https://github.com/Hye-Ararat/Ararat.git
+```bash
+git clone https://github.com/Hye-Ararat/Ararat.git Ararat
 ```
 
-next navigate to the Ararat directory
+## Installing Ararat Dependencies
+```bash
+npm i -g yarn
+```
 
 ```bash
-cd Ararat
+cd Ararat && yarn install
 ```
 
-next run the following command to install all the dependencies
+## Configuring Ararat
 
-```bash
-npm install 
-```
-
-next we need to edit the config files
-
-```bash
-nano .env
-```
-
-```env
-# The MongoDB connection string
-DATABASE_URI=mongodb://ararat:ararat@localhost:27017/ararat?authSource=admin&readPreference=primary&appname=Ararat&ssl=false
-```
-To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
-
-
-
-To Generate a random string you can use the following command
-
-```bash
-openssl rand -base64 32
-```
 ```bash
 nano .env.local
 ```
+
 ```env
+DATABASE_URL=mongodb://ararat:ararat@localhost:27017/ararat
 ENC_KEY=32characterstring
+URL=ipaddress:3000
 ```
+
 To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
-
-Next we need to prisma migrate
-
-```bash
-npx prisma migrate dev
-```
-
-Next we need to build the project
-
-```bash
-npm run build
-```
-
 
 ## Running Ararat
 
-To run Ararat you can use the following command
-
 ```bash
-npm run start
+yarn run build
 ```
 
-### Congratulations
-Congrats! Your done! Your shiny new Hye Ararat instance is ready!
+```bash
+yarn run start
+```
+
+

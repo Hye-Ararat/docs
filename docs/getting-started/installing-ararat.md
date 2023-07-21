@@ -28,11 +28,11 @@ nvm use --lts
 ## Installing MongoDB
 
 ```bash
-wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-6.gpg
 ```
 
 ```bash
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
 ```bash
@@ -50,6 +50,8 @@ sudo systemctl start mongod
 ```bash
 sudo systemctl enable mongod
 ```
+
+To configure mongodb go to here [Configuring MongoDB](https://ararat.hye.gg/docs/getting-started/configuring-mongodb)
 
 ## Installing Ararat
 
@@ -73,7 +75,7 @@ nano .env.local
 ```
 
 ```env
-DATABASE_URL=mongodb://ararat:ararat@localhost:27017/ararat
+DATABASE_URL=mongodb://ararat:ararat@localhost:27017/ararat?authSource=admin
 ENC_KEY=32characterstring
 URL=ipaddress:3000
 ```

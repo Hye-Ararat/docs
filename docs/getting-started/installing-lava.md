@@ -26,7 +26,7 @@ snap install lxd --channel=latest/stable
 ## Configuring LXD
 
 ```bash
-EDITOR=nano 
+EDITOR=nano
 ```
 
 ```bash
@@ -45,6 +45,17 @@ config:
 To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
 
 
+## Starting Lava
+
+```bash 
+yarn run start
+```
+
 ## Press next to continue
 
 Press the Next button on the Ararat panel to continue to the create the node. 
+
+
+## SSL Certificates
+
+if you want to use SSL certificates you can follow this guide [here](https://ararat.hye.gg/docs/getting-started/ssl-certificates)

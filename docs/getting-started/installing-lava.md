@@ -43,12 +43,13 @@ config:
   oidc.issuer: http://ipaddress:3000/oidc
 ```
 To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
-
-
+:::tip
+Make sure your ararat server is running before you save those changes
+:::
 ## Starting Lava
 
 ```bash 
-yarn run start
+ts-node index.ts
 ```
 
 ## Press next to continue
@@ -58,4 +59,4 @@ Press the Next button on the Ararat panel to continue to the create the node.
 
 ## SSL Certificates
 
-if you want to use SSL certificates you can follow this guide [here](https://ararat.hye.gg/docs/getting-started/ssl-certificates)
+if you want to use SSL certificates you can follow this guide [here](ssl-certificates)

@@ -51,7 +51,7 @@ sudo systemctl start mongod
 sudo systemctl enable mongod
 ```
 
-To configure mongodb go to here [Configuring MongoDB](https://ararat.hye.gg/docs/getting-started/configuring-mongodb)
+To configure mongodb go to here [Configuring MongoDB](configuring-mongodb)
 
 ## Installing Ararat
 
@@ -74,8 +74,9 @@ cd Ararat && yarn install
 nano .env.local
 ```
 
+Make sure the use the same password you used for to setup mongodb
 ```env
-DATABASE_URL=mongodb://ararat:ararat@localhost:27017/ararat?authSource=admin
+DATABASE_URL=mongodb://ararat:passwordhere@localhost:27017/ararat?authSource=admin
 ENC_KEY=32characterstring
 URL=ipaddress:3000
 ```

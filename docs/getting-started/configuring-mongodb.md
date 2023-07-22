@@ -1,6 +1,6 @@
 
 
-## Configuring MongoDB
+# Configuring MongoDB
 
 
 ## Check if mongodb is running
@@ -39,9 +39,9 @@ Once your in mongodb shell type this command
 ```
 
 ```bash
-db.createUser({user:"ararat", pwd:"ararat", roles:[{role:"root", db:"admin"}]})
+db.createUser({user:"ararat", pwd:"passwordhere", roles:[{role:"root", db:"admin"}]})
 ```
-
+Make sure to change the password to something more secure
 ```bash
 exit
 ```

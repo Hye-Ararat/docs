@@ -16,7 +16,7 @@ Node.JS version 18 or later
 
 
 ### Supported Operating Systems
-- Ubuntu 18.04+ (only LTS releases supported)
+- Ubuntu 22.04+ (only LTS releases supported)
 
 ### Kernel Requirements
 The minimum supported kernel version is 5.4.

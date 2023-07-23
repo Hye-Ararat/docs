@@ -42,7 +42,7 @@ export default function Home() {
             </div>
         )
     }
-    const screenshots = ["/img/screen1.png", "/img/screen2.png"]
+    const screenshots = ["/img/screen1.png", "/img/screen2.png", "/img/screen3.png", "/img/screen4.png", "/img/screen5.png", "/img/screen6.png"]
     const [screenshotIndex, setScreenshotIndex] = useState(screenshots[Math.floor(Math.random() * screenshots.length)]);
     useEffect(() => {
         let interval = setInterval(() => {
@@ -59,9 +59,9 @@ export default function Home() {
             <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
             {watching ?
                 <div style={{ position: "absolute", backdropFilter: "brightness(30%) blur(10px)", WebkitBackdropFilter: "blur(10px) brightness(30%)", width: "100vw", height: "95vh", alignItems: "center", justifyContent: "center", zIndex: 9999 }}>
-                    < p style={{ textAlign: "center", marginTop: 10, fontSize: "70px", fontFamily: "Poppins", fontWeight: "bold", color: "white" }}>Hye Event July 24th 2022</p>
+                    < p style={{ textAlign: "center", marginTop: 10, fontSize: "70px", fontFamily: "Poppins", fontWeight: "bold", color: "white" }}>Hye Event July 24th 2023</p>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: 2 }}>
-                        <iframe width="60%" height="500" src="https://www.youtube.com/embed/grtVnR4QdDw?autoplay=1" title="Hye Event July 24th 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe width="60%" height="500" src="https://www.youtube.com/embed/grtVnR4QdDw?autoplay=1" title="Hye Event July 24th 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                     <div style={{ display: "flex" }}>
                         <button onClick={() => {
@@ -87,7 +87,7 @@ export default function Home() {
                             marginTop: -40,
                             fontWeight: 500,
                             fontSize: 25
-                        }}>Introducing the All New Hye Ararat, Hye Cloud, and Hye Speed</p>
+                        }}>Introducing Hye Ararat Yergu, Camel Cloud, and updates to Hye Craft</p>
 
                         <button className={clsx("buttons", styles.buttons)} style={{
                             padding: 10,

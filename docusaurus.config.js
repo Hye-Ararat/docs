@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Hye Ararat',
-  tagline: 'Need help with Hye Ararat? This is the place.',
-  url: 'https://docs.ararat.hye.gg',
+  tagline: 'Take your infrastructure to its peak',
+  url: 'https://hyeararat.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -59,8 +59,8 @@ const config = {
       navbar: {
         title: 'Hye Ararat',
         logo: {
-          alt: 'Hye Logo',
-          src: 'img/logo-square.png',
+          alt: 'Hye Ararat',
+          src: 'img/araratLogo.png',
         },
         items: [
           { to: '/home', label: 'Home', position: 'left' },
@@ -72,7 +72,6 @@ const config = {
           },
 
           { to: '/blog', label: 'Blog', position: 'left' },
-          { href: 'https://cloud.hye.gg', label: 'Hye Cloud', position: 'left' },
 
           { to: '/event', label: 'Hye Event', position: 'left' },
 
@@ -82,6 +81,10 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      announcementBar: {
+        id: "yergu",
+        content: "🎉 The All New Hye Ararat Yergu Is Here 🎉",
       },
       footer: {
         style: 'dark',

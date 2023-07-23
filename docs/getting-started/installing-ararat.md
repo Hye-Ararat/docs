@@ -1,24 +1,96 @@
 ---
 sidebar_position: 2
 ---
-
 # Installing Ararat
-<!-- The easiest way to install Ararat is one-click deployment to Hye Cloud over the Hye Speed Network-->
 
-### Install Wizard
-On your computer, download the install wizard using this link. Your computer will connnect to your node using this wizard to install Hye Ararat.
+## Installing Node.js
 
-https://github.com/Hye-Ararat/Installer/archive/refs/heads/main.zip
-
-Open a new terminal in the folder, and install the required dependencies using
-```
-npm install
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
 
-After dependency installation, start the install wizard and follow it's instructions using the following command
-```
-node installer.js
+```bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 ```
 
-### Congratulations
-Congrats! Your done! Your shiny new Hye Ararat instance is ready!
+```bash
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
+```bash
+nvm install --lts
+```
+
+```bash
+nvm use --lts
+```
+
+## Installing MongoDB
+
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-6.gpg
+```
+
+```bash
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+```
+
+```bash
+sudo apt-get update
+```
+
+```bash
+sudo apt-get install -y mongodb-org
+```
+
+```bash
+sudo systemctl start mongod
+```
+
+```bash
+sudo systemctl enable mongod
+```
+
+To configure mongodb go to here [Configuring MongoDB](configuring-mongodb)
+
+## Installing Ararat
+
+```bash
+git clone https://github.com/Hye-Ararat/Ararat.git Ararat
+```
+
+## Installing Ararat Dependencies
+```bash
+npm i -g yarn
+```
+
+```bash
+cd Ararat && yarn install
+```
+
+## Configuring Ararat
+
+```bash
+nano .env.local
+```
+
+Make sure the use the same password you used for to setup mongodb
+```env
+DATABASE_URL=mongodb://ararat:passwordhere@localhost:27017/ararat?authSource=admin
+ENC_KEY=32characterstring
+URL=ipaddress:3000
+```
+
+To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
+
+## Running Ararat
+
+```bash
+yarn run build
+```
+
+```bash
+yarn run start
+```
+
+

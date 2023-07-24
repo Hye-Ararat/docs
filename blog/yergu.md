@@ -3,6 +3,7 @@ slug: yergu
 title: Introducing Hye Ararat Yergu
 authors:
   - joseph
+date: 2023-07-24:05:00
 ---
 
 Sleeker, faster, and more efficient, Hye Ararat Yergu is a breakthrough in infrastructure management.

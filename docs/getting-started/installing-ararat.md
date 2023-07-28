@@ -84,6 +84,13 @@ URL=ipaddress:3000
 To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
 
 ## Running Ararat
+Before we run ararat, We need to generate a key for the ``./key`` file
+
+```bash
+node setupKey.js
+```
+This should generate a key file in the Ararat folder
+
 
 ```bash
 yarn run build

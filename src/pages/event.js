@@ -61,7 +61,7 @@ export default function Home() {
                 <div style={{ position: "absolute", backdropFilter: "brightness(30%) blur(10px)", WebkitBackdropFilter: "blur(10px) brightness(30%)", width: "100vw", height: "95vh", alignItems: "center", justifyContent: "center", zIndex: 9999 }}>
                     < p style={{ textAlign: "center", marginTop: 10, fontSize: "70px", fontFamily: "Poppins", fontWeight: "bold", color: "white" }}>Hye Event July 24th 2023</p>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: 2 }}>
-                        <iframe width="60%" height="500" src="https://www.youtube.com/embed/grtVnR4QdDw?autoplay=1" title="Hye Event July 24th 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe width="60%" height="500" src="https://www.youtube.com/embed/uGKZXBozxXQ?autoplay=1" title="Hye Event July 24th 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                     <div style={{ display: "flex" }}>
                         <button onClick={() => {

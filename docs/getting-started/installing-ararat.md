@@ -83,7 +83,7 @@ URL=ipaddress:3000
 
 To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
 
-## Running Ararat
+## Generating a key
 Before we run ararat, We need to generate a key for the ``./key`` file
 
 ```bash
@@ -92,6 +92,15 @@ node setupKey.js
 This should generate a key file in the Ararat folder
 
 
+## Creating a user
+
+To Create the first user run the following command
+```bash
+node cli/createUser.js
+```
+follow the prompts to create a user
+
+## Building and Running Ararat
 ```bash
 yarn run build
 ```

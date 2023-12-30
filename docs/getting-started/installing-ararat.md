@@ -1,7 +1,12 @@
 ---
 sidebar_position: 2
 ---
+
 # Installing Ararat
+
+Hye Ararat will be automatically installed on your target system using the Hye Ararat install script. To install the Hye Ararat install tool to your computer, follow the steps.
+
+Run the following commands on your personal computer, not on the target system. This will install a script which will allow you to install Hye Ararat on the target system.
 
 ## Installing Node.js
 
@@ -25,88 +30,24 @@ nvm install --lts
 nvm use --lts
 ```
 
-## Installing MongoDB
+## Download The Installer
 
-```bash
-curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-6.gpg
+Download and unzip the installer from [here](https://codeload.github.com/Hye-Ararat/Installer/zip/refs/heads/main).
+
+## Prepare The Installer
+
+Run the following commands in the directory of the installer.
+
+```
+npm install
 ```
 
-```bash
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+## Run The Installer
+
+Run the installer using the following command:
+
+```
+node installer.js
 ```
 
-```bash
-sudo apt-get update
-```
-
-```bash
-sudo apt-get install -y mongodb-org
-```
-
-```bash
-sudo systemctl start mongod
-```
-
-```bash
-sudo systemctl enable mongod
-```
-
-To configure mongodb go to here [Configuring MongoDB](configuring-mongodb)
-
-## Installing Ararat
-
-```bash
-git clone https://github.com/Hye-Ararat/Ararat.git Ararat
-```
-
-## Installing Ararat Dependencies
-```bash
-npm i -g yarn
-```
-
-```bash
-cd Ararat && yarn install
-```
-
-## Configuring Ararat
-
-```bash
-nano .env.local
-```
-
-Make sure the use the same password you used for to setup mongodb
-```env
-DATABASE_URL=mongodb://ararat:passwordhere@localhost:27017/ararat?authSource=admin
-ENC_KEY=32characterstring
-URL=ipaddress:3000
-```
-
-To save the file press ``CTRL + X`` then press ``Y`` and then press ``ENTER``
-
-## Generating a key
-Before we run ararat, We need to generate a key for the ``./key`` file
-
-```bash
-node setupKey.js
-```
-This should generate a key file in the Ararat folder
-
-
-## Creating a user
-
-To Create the first user run the following command
-```bash
-node cli/createUser.js
-```
-follow the prompts to create a user
-
-## Building and Running Ararat
-```bash
-yarn run build
-```
-
-```bash
-yarn run start
-```
-
-
+Follow the instructions and fill out the requested information, and the installer will automatically setup your Hye Ararat instance.

@@ -71,8 +71,6 @@ const config = {
 
           { to: "/blog", label: "Blog", position: "left" },
 
-          { to: "/event", label: "Hye Event", position: "left" },
-
           {
             href: "https://github.com/Hye-Ararat/docs",
             label: "GitHub",
@@ -80,10 +78,10 @@ const config = {
           },
         ],
       },
-      announcementBar: {
+      /*     announcementBar: {
         id: "yergu",
         content: "🎉 The All New Hye Ararat Yergu Is Now In Beta 🎉",
-      },
+      }, */
       footer: {
         style: "dark",
         links: [
@@ -93,6 +91,19 @@ const config = {
               {
                 label: "Introduction",
                 to: "/docs/intro",
+              },
+            ],
+          },
+          {
+            title: "Legal",
+            items: [
+              {
+                label: "Terms of Service",
+                to: "/tos",
+              },
+              {
+                label: "Privacy Policy",
+                to: "/privacy",
               },
             ],
           },
